@@ -140,3 +140,18 @@ The extent of data collection and whether users are fully aware.
 Use of data for advertising purposes, especially without clear, informed consent.
 Sharing data with third parties and providing users control over this.
 From a legal perspective, these concerns could be violations of privacy laws like GDPR and CCPA, which emphasize user consent, transparency, and control over personal data. Whether these practices are legal often depends on the specific jurisdiction and laws governing data protection.
+
+
+### created prompts to gpt 3.5 to come up with gauge to asses risk of privacy and data breach for each agreement sample response for whatsapp agreement
+Privacy & Data Breach Risk Gauge Analysis for WhatsApp
+Based on WhatsApp’s user agreement regarding data collection, usage, and privacy, here's how it rates across our risk categories:
+
+Category	Rating	Explanation
+Data Collection	4	WhatsApp collects extensive data, including device, connection, location, and usage data. Some data collection (e.g., IP addresses, device info) happens automatically, even without user consent for certain features.
+Data Sharing	3	WhatsApp shares information with Meta (its parent company), but encryption protects the contents of messages. The policy is somewhat clear about data sharing practices, but there's limited user control over the extent of sharing with Meta’s ecosystem.
+User Control & Consent	3	Users can manage permissions (e.g., location sharing) and limit certain data collections via settings. However, certain types of data collection (e.g., device data) are unavoidable, and there are limitations in how much control users have over broader data sharing with Meta.
+Security Practices	2	WhatsApp uses end-to-end encryption for messages and deletes undelivered messages after 30 days. This offers a strong level of security for message content. However, metadata (such as contact lists, interaction data) remains visible to WhatsApp and Meta.
+Data Retention	3	Message content is generally not stored, but undelivered messages may be stored for up to 30 days. Other data, like contact lists and metadata, is retained longer, and deletion options aren't as clear for non-message data.
+Transparency & Communication	3	WhatsApp provides a decent level of transparency, informing users about data collection and allowing them to control some features. However, the link with Meta and the full implications of cross-platform data sharing could be clearer to users.
+Overall WhatsApp Risk Score: 3.0 (Moderate Risk)
+Summary: WhatsApp demonstrates strong security for message content through end-to-end encryption, but the extensive collection of metadata, device information, and potential sharing with Meta increases the risk for users. While users have some control over location and feature-based data, certain elements, such as automatic collection of IP addresses, are harder to manage. This gives WhatsApp a moderate privacy risk, particularly in terms of data sharing and retention practices.
