@@ -2,6 +2,14 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 import requests
+
+token_path = 'secret.txt'
+
+def read_api_token():
+    with open(token_path, 'r') as file:
+        token = file.readline().strip()
+    return token
+
 # from langchain import HuggingFaceHub
 
  
@@ -9,13 +17,11 @@ import requests
 dotenv_path = Path('../../.env')
 load_dotenv(dotenv_path=dotenv_path)
 
-# Access the API token from the environment variables
-api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
-
-print(api_token) #check if .env file is importing the access token for huging face hub properly 
+api_token = read_api_token()
+#check if .env file is importing the access token for huging face hub properly 
 
 headers = {"Authorization": f"Bearer {api_token}"}
-API_URL = "https://api-inference.huggingface.co/models/gpt2"
+API_URL = "https://api-inference.huggingface.co/models/Reflection-Llama-3.1-70B"
 
 def query_huggingface_api(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
