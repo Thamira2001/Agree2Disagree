@@ -1,21 +1,15 @@
-import openai
+from openai import OpenAI
 
 # Load the API key from secret.txt
-with open('secret.txt', 'r') as file:
+with open('init_testing/scripts/secret.txt', 'r') as file:
     api_key = file.read().strip()
 
-# Set your API key
-openai.api_key = api_key
+client = OpenAI(api_key=api_key)
+completion = client.chat.completions.create(
+    # model="gpt-4o",
+    model="gpt-3.5-turbo-0125",
 
-# Make a sample API call
-response = openai.ChatCompletion.create(
-    model="gpt-4",  # or "gpt-3.5-turbo"
     messages=[
-        {"role": "system", "content": "You are a helpful assistant."},
-        {"role": "user", "content": "Give me a summary of the latest AI research."}
+        {"role": "user", "content": "write a haiku about ai"}
     ]
 )
-
-
-# Print the response
-print(response['choices'][0]['message']['content'])
