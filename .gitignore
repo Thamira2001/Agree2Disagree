@@ -2,3 +2,4 @@ venv
 .gitignore
 geminai.txt
 secret.txt
+myenv
