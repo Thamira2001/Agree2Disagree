@@ -6,11 +6,13 @@ def read_api_token():
     with open('geminai.txt', 'r') as file:
         token = file.readline().strip()
     return token
+
 API_TOKEN = read_api_token()
 
 genai.configure(api_key=API_TOKEN)
 
 model = genai.GenerativeModel("gemini-1.5-flash")
+
 response = model.generate_content(""" can you explain this to me as if you are a lawyer explaining it to a 16 yr old
 ### content 
 We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates and dimming your screen if your battery runs low.
@@ -27,7 +29,7 @@ Terms you search for
 Videos you watch
 Views and interactions with content and ads
 Voice and audio information
-Purchase activity
+Purchase activityvc
 People with whom you communicate or share content
 Activity on third-party sites and apps that use our services
 Chrome browsing history you’ve synced with your Google Account
