@@ -3,19 +3,21 @@ from bs4 import BeautifulSoup
 
 # List of companies with their terms and privacy policy URLs
 COMPANIES = {
-    "Google Terms": "https://policies.google.com/terms/archive/19990920?hl=en",
-    "Apple Terms":  "https://www.apple.com/legal/privacy/en-ww/",
+    # "Google Terms": "https://policies.google.com/terms/archive/19990920?hl=en",
+    # "Apple Terms":  "https://www.apple.com/legal/privacy/en-ww/",
     # "Google Privacy Policy": "https://policies.google.com/privacy",
     # "Facebook Terms": "https://www.facebook.com/terms.php",
     # "Facebook Privacy Policy": "https://www.facebook.com/policy.php",
+    "Microsoft": "https://www.microsoft.com/en-us/servicesagreement#1_YourPrivacy",
     # Add more companies and URLs as needed
 }
 
+from IPython.display import Markdown, display
 def scrape_terms(url):
     try:
         response = requests.get(url)
         response.raise_for_status()
-        
+        display(Markdown(response.text))
         # Parsing the page content
         soup = BeautifulSoup(response.text, 'html.parser')
 
